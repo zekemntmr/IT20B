@@ -27,4 +27,43 @@ function computeGrade(grade){
     }
 }
 
-computeGrade(87)
+//computeGrade(87)
+
+
+function login(username,password){
+
+    if(username === "gwapoko"){
+
+        
+        if(password === 12345){
+            console.log("Welcome User")
+        }else{
+            console.log("Invalid Username and Password")
+        }
+        
+
+    }else{
+        console.log("Not listed, create an account?");
+    }
+}
+
+login("gwapoko",12345)
+
+function ticketPrice(age){
+    if(age < 18){
+        if(age < 5){
+            console.log("Free entrance for 5 below")
+        }else{
+            console.log("Ticket Price: Children Price")
+        }
+    }else{
+        if(age >= 60){
+            console.log("Ticket Price: Senior Discount")
+        }else{
+            console.log("Ticket Price: Adult Price")
+        }
+    }
+}
+
+
+ticketPrice(41)
