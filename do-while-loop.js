@@ -31,6 +31,7 @@ console.log(output);
 */
 
 arr1 = [4,2,3];
+arr2 = [4,2,3,4,23,2];
 
 
 
