@@ -12,13 +12,27 @@ class Stack{
     }
     traverse(){
         let output = " ";
-        for(let i=0; i < this.topIndex; i++){
+        for(let i=0; i <= this.topIndex; i++){
             output += this.data[i] + " ";
+
+            console.log(output);
 
             
         }
-        console.log(output);
+        
     }
+    is_empty(){
+        return this.topIndex === -1;
+
+        }
+    size(){
+        return this.topIndex+1
+        }
+
+    peek(){
+        if(this.is_empty()) return null;
+        return this.data[this.topIndex];
+        }
 }
 
 stack1 = new Stack();
@@ -26,4 +40,5 @@ stack1 = new Stack();
 stack1.push(4);
 stack1.push(2);
 stack1.push(3);
+
 stack1.traverse();
