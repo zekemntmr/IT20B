@@ -39,10 +39,23 @@ class Array{
         this.length++;
 
     }
+    delete(index){
+        if(index<0 || index >= this.length){
+            console.log("Invalid Index");
+            return;
+        }
+        for(let i = index; i < index; i++){
+            this.data[i] = this.data[i-1];
+        }
+        delete this.data[this.length-1];
+        this.length--;
+    }
 }
 
 arr1 = new Array9[4,3,2];
 
 arr1.traverse();
 arr1.insert(0,9);
+arr1.traverse();
+arr1.delete(3);
 arr1.traverse();
