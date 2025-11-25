@@ -4,13 +4,9 @@ class Array{
         this.data = {};
         this.length = 0;
 
-        for(let i=0; i<initialData; i++){
+        for(let i=0; i<initialData.length; i++){
             this.data[i] = initialData[i];
             this.length++;
-
-
-
-
         }
     }
 
@@ -18,7 +14,7 @@ class Array{
         let output = "";
 
         for(let i=0;i<this.length; i++){
-            output += this.data + "";
+            output += this.data[i] + " ";
         }
         console.log(output);
     }
@@ -50,12 +46,24 @@ class Array{
         delete this.data[this.length-1];
         this.length--;
     }
+    update(index, element){
+        if(index<0 || index > this.length){
+            console.log("Invalid Index");
+            return;
+        }
+        this.data[index] = element;
+
+    }
 }
 
-arr1 = new Array9[4,3,2];
+arr1 = new Array([4,3,2]);
 
 arr1.traverse();
 arr1.insert(0,9);
 arr1.traverse();
 arr1.delete(3);
+arr1.traverse();
+
+arr1.update(2,5);
+
 arr1.traverse();
