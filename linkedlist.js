@@ -45,6 +45,22 @@ class LinkedList{
 
         current.next = node;
     }
+    insert_after(target,element){
+        let current = this.head;
+
+        while(current){
+            if(current.value === target){
+                const node = new Node(element);
+                node.next = current.next;
+                current.next = node;
+                return;
+            }
+            current = current.next;
+        }
+
+        console.log("Target not found");
+    }
+
     search(element){
         let current = this.head;
 
